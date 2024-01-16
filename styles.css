@@ -153,6 +153,7 @@ LANDING PAGE
   padding-top: 150px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .landing__left--title {
@@ -186,6 +187,7 @@ LANDING PAGE
 }
 
 .landing__right--para {
+  background-color: transparent;
   margin-bottom: 100px;
 }
 
@@ -198,7 +200,6 @@ LANDING PAGE
   margin-top: 30px;
   padding: 25px 22px 25px 22px;
   border-radius: 15px;
-  gap: 40px;
   color: black;
   background-color: #aed8e0;
   border: none;
@@ -220,20 +221,10 @@ LANDING PAGE
 .landing-page__outline {
   position: absolute;
   z-index: 1;
-  bottom: 35px;
+  bottom: 6%;
   left: 50px;
   width: 90%;
   background-color: transparent;
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 20px));
-}
-
-.landing-page__lines {
-  position: absolute;
-  z-index: 1;
-  background-color: transparent;
-  width: 80%;
-  bottom: 80px;
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 20px));
 }
 
 .landing-page__outline,
@@ -254,7 +245,6 @@ PROJECTS
 .projects__wrapper {
   display: flex;
   justify-content: space-between;
-  margin: 0 70px;
   position: relative;
   z-index: 2;
 }
@@ -312,6 +302,10 @@ PROJECTS
 .projects__img--right-group {
   width: 50%;
   background-color: transparent;
+  padding-left: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .projects__img1,
@@ -334,18 +328,15 @@ PROJECTS
 
 .projects__img1 {
   border: none;
-  width: 440px;
-  height: 400px;
+  width: 100%;
 }
 
 .projects__img2 {
-  width: 515px;
-  height: 680px;
+  width: 100%;
 }
 
 .projects__img3 {
-  width: 400px;
-  height: 215px;
+  width: 100%;
 }
 
 .project__title {
@@ -442,14 +433,14 @@ PROJECTS
 
 .project__bubble--safety {
   position: absolute;
-  top: 13px;
-  right: 172px;
+  top: 14px;
+  right: 150px;
 }
 
 .project__bubble--green {
   position: absolute;
-  top: 13px;
-  right: 51px;
+  top: 14px;
+  right: 0;
 }
 
 .project__bubble--enh {
@@ -859,4 +850,89 @@ FOOTER
   line-height: 24px;
   margin-bottom: 12px;
   cursor: not-allowed;
+}
+
+@media (max-width: 1600px) {
+  #landing {
+    margin: 0;
+  }
+  .landing__left--title {
+    font-size: 84px;
+    line-height: 120px;
+  }
+
+  .landing__right--para {
+    font-size: 18px;
+  }
+
+  .landing-page__outline {
+    bottom: 20%;
+  }
+}
+
+@media (max-width: 1500px) {
+  .projects__wrapper {
+    flex-direction: column;
+  }
+  .projects__text--wrapper {
+    padding-bottom: 120px;
+  }
+  .projects__right--wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+  .projects__wrapper {
+    align-items: center;
+  }
+}
+
+@media (max-width: 1300px) {
+  .landing__right--text {
+    padding-left: 72px;
+  }
+  .landing__right--para {
+    margin-bottom: 0;
+    margin-left: 24px;
+  }
+  .landing__right--text {
+    margin-right: 0;
+  }
+  .landing__right--wrapper {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 998px) {
+  .container {
+    padding: 40px 40px;
+  }
+  .container2 {
+    padding: 0;
+  }
+  .nav__links {
+    display: none;
+  }
+  .landing__text--wrapper {
+    flex-direction: column;
+  }
+  .landing__left--title {
+    margin: 0;
+  }
+  .landing__right--text {
+    margin: 0;
+    padding: 0;
+  }
+  .landing__right--para {
+    text-align: center;
+    padding-bottom: 42px;
+  }
+  .landing-page__outline {
+    display: none;
+  }
+  .landing__left--title {
+    text-align: center;
+  }
+  .projects__wrapper {
+    margin: 0;
+  }
 }
