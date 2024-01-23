@@ -10,6 +10,10 @@
   color: #ffffffcc;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 ul {
   list-style: none;
 }
@@ -284,7 +288,6 @@ PROJECTS
 }
 
 .projects__right--wrapper {
-  width: 100%;
   display: flex;
   justify-content: center;
   z-index: 2;
@@ -326,19 +329,6 @@ PROJECTS
   position: relative;
 }
 
-.projects__img1 {
-  border: none;
-  width: 100%;
-}
-
-.projects__img2 {
-  width: 100%;
-}
-
-.projects__img3 {
-  width: 100%;
-}
-
 .project__title {
   font-family: "Neue Haas Grotesk Display Pro", sans-serif;
   font-weight: 500;
@@ -372,10 +362,11 @@ PROJECTS
   align-items: center;
   margin: 64px 0;
   background-color: transparent;
+  width: 100%;
 }
 
 .company {
-  padding: 0 40px;
+  padding: 8px 40px;
 }
 
 .projects__blueprints--wrapper {
@@ -413,17 +404,17 @@ PROJECTS
 
 .project__img--svg2 {
   right: 55px;
-  bottom: 30px;
+  bottom: 7%;
 }
 
 .project__img--svg3 {
-  right: 97px;
-  bottom: 24px;
+  right: 100px;
+  bottom: 10%;
 }
 
 .project__img--svg4 {
-  right: -20px;
-  bottom: 29px;
+  right: 0;
+  bottom: 4%;
 }
 
 .project__bubble--div,
@@ -434,31 +425,31 @@ PROJECTS
 .project__bubble--safety {
   position: absolute;
   top: 14px;
-  right: 150px;
+  right: 175px;
 }
 
 .project__bubble--green {
   position: absolute;
   top: 14px;
-  right: 0;
+  right: 55px;
 }
 
 .project__bubble--enh {
   position: absolute;
   top: -5px;
-  right: 94px;
+  right: 100px;
 }
 
 .project__bubble--cost {
   position: absolute;
   top: 15px;
-  right: 106px;
+  right: 125px;
 }
 
 .project__bubble--community {
   position: absolute;
   top: 15px;
-  right: -8px;
+  right: 0;
 }
 
 /* 
@@ -853,20 +844,22 @@ FOOTER
 }
 
 @media (max-width: 1600px) {
-  #landing {
-    margin: 0;
-  }
   .landing__left--title {
     font-size: 84px;
     line-height: 120px;
   }
-
   .landing__right--para {
     font-size: 18px;
   }
-
   .landing-page__outline {
     bottom: 20%;
+  }
+  .testimonials__feed {
+    padding: 0;
+    height: 1000px;
+  }
+  .contact__wrapper {
+    flex-direction: column;
   }
 }
 
@@ -877,12 +870,54 @@ FOOTER
   .projects__text--wrapper {
     padding-bottom: 120px;
   }
+  .projects__img--left-group {
+    width: 100%;
+  }
   .projects__right--wrapper {
     flex-direction: column;
     align-items: center;
   }
   .projects__wrapper {
     align-items: center;
+  }
+  .projects__img--right-group {
+    padding-left: 0;
+    width: 100%;
+  }
+  .project__bubble--safety {
+    right: 195px;
+  }
+  .project__bubble--green {
+    right: 75px;
+  }
+  .project__bubble--enh {
+    right: 115px;
+  }
+  .project__bubble--cost {
+    right: 125px;
+  }
+  .project__bubble--community {
+    right: 5px;
+  }
+  .project__img--svg2 {
+    right: 75px;
+  }
+  .project__img--svg3 {
+    right: 120px;
+  }
+  .project__img--svg4 {
+    right: 0;
+  }
+  .footer__wrapper {
+    display: flex;
+    padding: 15px;
+    padding-top: 52px;
+  }
+  .testimonial__lines--svg {
+    left: -25%;
+  }
+  .contact__light {
+    display: none;
   }
 }
 
@@ -899,6 +934,58 @@ FOOTER
   }
   .landing__right--wrapper {
     margin-right: 0;
+  }
+  .project__circle--svg {
+    display: none;
+  }
+  .projects__blueprints--wrapper {
+    padding: 14px;
+  }
+  .blueprint__content--wrapper {
+    padding: 70px 40px 0 40px;
+  }
+  .blueprint__info--wrapper {
+    padding: 32px 32px;
+  }
+  .testimonials__feed {
+    height: 1100px;
+  }
+  .testimonial {
+    width: 35%;
+    margin: 14px;
+  }
+  .testimonial__lines--svg {
+    left: -40%;
+  }
+  .contact__wrapper {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  .contact__title {
+    border-radius: 15px;
+  }
+  .contact__left-side {
+    margin: 24px 0;
+    padding: 24px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    width: 100%;
+    text-align: center;
+  }
+  .contact__right-side {
+    padding: 0;
+    margin: 24px 0;
+  }
+  .contact-form {
+    padding-bottom: 24px;
+  }
+  .contact__right-side--wrapper {
+    background-color: #16171f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
   }
 }
 
@@ -934,5 +1021,152 @@ FOOTER
   }
   .projects__wrapper {
     margin: 0;
+  }
+  .projects__text--wrapper {
+    justify-content: center;
+    align-items: center;
+  }
+  .projects__left--title {
+    text-align: center;
+  }
+  .footerlist--wrapper {
+    padding: 14px;
+  }
+  .company {
+    padding: 0 8px;
+  }
+  .company__title, .contact__title, .testimonial__title {
+    text-align: center;
+  }
+  .projects__bluprints--title {
+    text-align: center;
+  }
+  .blueprint__content--wrapper {
+    display: none;
+  }
+  .testimonials__feed {
+    height: 1200px;
+    gap: 14px;
+  }
+  .testimonial__para {
+    margin-left: 0;
+  }
+  .testimonial {
+    width: 50%;
+    margin: 0;
+  }
+  .contact-form {
+    width: 100%;
+  }
+  .testimonial__lines--svg {
+    display: none;
+  }
+}
+
+@media (max-width: 650px) {
+  .container {
+    padding: 24px;
+  }
+  .landing-page__light {
+    display: none;
+  }
+  .landing__text--wrapper {
+    padding-top: 48px;
+  }
+  .contact__link {
+    font-size: 14px;
+    margin: 0 4px;
+  }
+  .footer__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 48px 24px;
+  }
+  .nav__button {
+    display: none;
+  }
+  .landing__right--para {
+    margin-left: 0;
+  }
+  .company__wrapper {
+    flex-wrap: wrap;
+  }
+  .projects__img1,
+  .projects__img2,
+  .projects__img3 {
+    width: 100%;
+  }
+  .project__bubble--safety {
+    right: 27%;
+    width: 15%;
+  }
+  .project__bubble--green {
+    right: 0;
+    width: 25%;
+  }
+  .project__bubble--enh {
+    right: 5%;
+    width: 35%;
+    top: 0;
+  }
+  .project__bubble--cost {
+    right: 25%;
+    width: 25%;
+  }
+  .project__bubble--community {
+    right: 0;
+    width: 22%;
+  }
+  .project__img--svg2 {
+    right: 5px;
+  }
+  .project__img--svg3 {
+    right: 20px;
+    bottom: 35px
+  }
+  .project__img--svg4 {
+    right: 0;
+  }
+  .projects__blueprints--wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+  .projects__left--wrapper {
+    width: 100%;
+    padding-left: 16px;
+  }
+  .footer__link--title {
+    padding-top: 24px;
+  }
+  .contact__title {
+    line-height: 56px;
+    font-size: 60px;
+  }
+  .testimonial-extra {
+    display: none;
+  }
+  .project__title {
+    padding-left: 24px;
+  }
+  .company__title {
+    padding: 0 12px;
+  }
+}
+
+@media (max-width: 500px) {
+  .project__img--svg2 {
+    width: 12%;
+    bottom: 36px;
+  }
+  .project__img--svg3 {
+    width: 12%;
+    bottom: 36px;
+    right: 4%;
+  }
+  .project__img--svg4 {
+    width: 12%;
+    bottom: 30px;
+    right: 1%;
   }
 }
